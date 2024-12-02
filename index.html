@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Average Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="calculator-header">Stock Average Calculator</h1>
+    <form id="stock-form">
+      <!-- First Buy (Quantity and Price) -->
+      <div class="stock-entry">
+        <h3>First Buy</h3>
+        <div class="form-group">
+          <label for="quantity-1">Quantity:</label>
+          <input type="number" id="quantity-1" name="quantity-1" required>
+        </div>
+        <div class="form-group">
+          <label for="price-1">Price (₹):</label>
+          <input type="number" id="price-1" name="price-1" required>
+        </div>
+        <p><strong>Total for First Buy: ₹<span id="total-1">0</span></strong></p>
+      </div>
+
+      <!-- Second Buy (Quantity and Price) -->
+      <div class="stock-entry">
+        <h3>Second Buy</h3>
+        <div class="form-group">
+          <label for="quantity-2">Quantity:</label>
+          <input type="number" id="quantity-2" name="quantity-2" required>
+        </div>
+        <div class="form-group">
+          <label for="price-2">Price (₹):</label>
+          <input type="number" id="price-2" name="price-2" required>
+        </div>
+        <p><strong>Total for Second Buy: ₹<span id="total-2">0</span></strong></p>
+      </div>
+
+      <!-- Buttons -->
+      <button type="button" id="calculate-average">Calculate Average</button>
+      <button type="button" id="clear-fields">Clear Fields</button>
+    </form>
+
+    <!-- Result Section -->
+    <h2>Calculations</h2>
+    <table id="result-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Total Quantity</td>
+          <td id="total-quantity">0</td>
+        </tr>
+        <tr>
+          <td>Total Investment (₹)</td>
+          <td id="total-investment">0</td>
+        </tr>
+        <tr>
+          <td>Average Purchase Price (₹)</td>
+          <td id="average-price">0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
